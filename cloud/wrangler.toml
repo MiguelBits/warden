@@ -1,0 +1,19 @@
+name = "warden-control"
+main = "src/worker.js"
+compatibility_date = "2026-10-16"
+
+# Replace the id after: npx wrangler kv namespace create WARDEN
+[[kv_namespaces]]
+binding = "WARDEN"
+id = "00000000000000000000000000000000"
+
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 1
